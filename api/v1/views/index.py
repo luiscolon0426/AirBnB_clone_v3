@@ -2,7 +2,6 @@
 ''' module that have the get status '''
 
 from flask import jsonify
-import index
 from api.v1.views import app_views
 
 @app_views.route('/status')
