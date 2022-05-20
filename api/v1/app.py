@@ -15,6 +15,7 @@ def close():
     storage.close()
 
 if __name__ == "__main__":
+    ''' only executes as main '''
     host = getenv("HBNB_API_HOST")
     if not host:
         host = "0.0.0.0"
