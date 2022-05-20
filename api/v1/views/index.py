@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-''' comment '''
+''' module that have the get status '''
 
 from flask import jsonify
 import index

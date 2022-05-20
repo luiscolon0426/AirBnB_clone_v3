@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-''' comment '''
+''' module that makes this an app '''
 
 from os import getenv
 from flask import Flask
@@ -11,7 +11,7 @@ app.register_blueprint(app_views)
 
 @app.teardown_appcontext
 def close():
-    ''' comment '''
+    ''' method that close the yes '''
     storage.close()
 
 if __name__ == "__main__":
