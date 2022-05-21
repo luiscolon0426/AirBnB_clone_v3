@@ -19,7 +19,7 @@ def get_status():
     return jsonify(dict)
 
 
-@app_views.route('/status')
+@app_views.route('/stats')
 def newcount():
     data = {
         "amenities": storage.count(Amenity),
