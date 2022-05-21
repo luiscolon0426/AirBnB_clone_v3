@@ -19,6 +19,7 @@ def close(self):
 
 @app.errorhandler(404)
 def invalid_route(e):
+    ''' method that creates a 404 '''
     return jsonify({"error": "Not found"}), 404
 
 
