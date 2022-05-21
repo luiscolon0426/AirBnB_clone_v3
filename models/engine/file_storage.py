@@ -70,7 +70,7 @@ class FileStorage:
         for key in obj_dict.values():
             if key.id == id:
                 return key
-            return None
+        return None
 
     def count(self, cls=None):
         if cls:
