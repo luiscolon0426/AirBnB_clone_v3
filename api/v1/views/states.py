@@ -9,7 +9,7 @@ from api.v1.views import app_views
 
 @app_views.route('/states', methods=['GET', 'POST'], strict_slashes=False)
 def get_states():
-    """ Handles HTTP request of all the state object """
+    """ focus on all the state object """
 
     if request.method == 'POST':
         data = request.get_json()
@@ -32,7 +32,7 @@ def get_states():
 @app_views.route('/states/<state_id>', methods=['GET', 'DELETE', 'PUT'],
                  strict_slashes=False)
 def get_state(state_id=None):
-    """ Handles HTTP requests of a single state object """
+    """ focus on a single state object """
     state = storage.get(State, state_id)
     if state is None:
         abort(404)
