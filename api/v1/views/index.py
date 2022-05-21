@@ -26,7 +26,7 @@ def newcount():
         "amenities": storage.count(Amenity),
         "cities": storage.count(City),
         "place": storage.count(Place),
-        "user": storage.count(Review),
+        "reviews": storage.count(Review),
         "states": storage.count(State),
         "users": storage.count(User)
     }
