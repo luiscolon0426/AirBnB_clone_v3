@@ -21,6 +21,7 @@ def get_status():
 
 @app_views.route('/stats')
 def newcount():
+    ''' endpoint that returns teach obj '''
     data = {
         "amenities": storage.count(Amenity),
         "cities": storage.count(City),
