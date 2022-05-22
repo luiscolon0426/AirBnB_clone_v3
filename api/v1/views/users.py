@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 ''' Module that handles all default RESTFul API '''
-
 from flask import jsonify, abort, request, Response
 from models import storage
 from models.user import User
