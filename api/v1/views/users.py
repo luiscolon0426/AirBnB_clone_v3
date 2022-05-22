@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 ''' Module that handles all default RESTFul API '''
-from flask import jsonify, abort, request, Response
+
+from flask import request, abort, Response, jsonify
 from models import storage
 from models.user import User
 from api.v1.views import app_views
