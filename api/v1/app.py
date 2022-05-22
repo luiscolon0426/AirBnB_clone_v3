@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 ''' module that makes this an app '''
 
-from flask import Flask, abort, jsonify
+from flask import Flask, jsonify
 from flask_cors import CORS
 from models import storage
 from api.v1.views import app_views
