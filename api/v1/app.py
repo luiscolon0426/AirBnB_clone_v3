@@ -6,23 +6,21 @@ from flask_cors import CORS
 from models import storage
 from api.v1.views import app_views
 from os import getenv
+
 app = Flask(__name__)
-
-
 app.register_blueprint(app_views)
-
-
 cors = CORS(app, resources={"/*": {"origins": "0.0.0.0"}})
 
+
 @app.teardown_appcontext
-def close(self):
-    ''' method that close the yes '''
+def close_storage(error):
+    ''' Calls the close method from storage '''
     storage.close()
 
 
 @app.errorhandler(404)
-def invalid_route(e):
-    ''' method that creates a 404 '''
+def resource_notfound(e):
+    """404 on routes not found"""
     return jsonify({"error": "Not found"}), 404
 
 
